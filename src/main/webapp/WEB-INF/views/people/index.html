@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Все люди</title>
+</head>
+<body>
+<!--th:each - подобие foreach для прохода по всем элементам коллекции и выводе-->
+<!--people - временная переменная, ${people}" - название коллекции-->
+<div th:each="person : ${people}">
+<!--        th:text - выводит названия-->
+<!--        th:href - создаём ссылку с возможностью перехода по ней-->
+<!--    указываем ссылку для перехода по пути /people/id(который мы получаем из нашей коллекции через геттер)-->
+<!--    при нажатии на ссылку мы переходим в show-->
+    <a th:href="@{/people/{id}(id=${person.getId()})}"
+       th:text="${person.getName()}">user</a>
+</div>
+
+</body>
+</html>
