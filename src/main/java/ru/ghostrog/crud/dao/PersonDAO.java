@@ -39,4 +39,14 @@ public class PersonDAO {
         person.setId(++PEOPLE_COUNT);
         people.add(person);
     }
+    //метод для обновления имени person
+    public void update(int id, Person updatedPerson) {
+        Person personToBeUpdated = show(id);
+
+        personToBeUpdated.setName(updatedPerson.getName());
+    }
+    //если такой id существует в листе(выдается true) происходит удаление элемента
+    public void delete(int id) {
+        people.removeIf(x-> x.getId() == id);
+    }
 }

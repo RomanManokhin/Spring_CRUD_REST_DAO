@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Все люди</title>
+    <title>All persons</title>
 </head>
 <body>
 <!--th:each - подобие foreach для прохода по всем элементам коллекции и выводе-->
@@ -15,6 +15,12 @@
     <a th:href="@{/people/{id}(id=${person.getId()})}"
        th:text="${person.getName()}">user</a>
 </div>
+<!--новая строка-->
+<br/>
+<!--полоса-->
+<hr/>
+
+<a href="/people/new">Create new person</a>
 
 </body>
 </html>
