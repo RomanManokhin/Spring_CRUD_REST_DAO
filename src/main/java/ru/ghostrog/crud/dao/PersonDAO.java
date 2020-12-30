@@ -20,10 +20,10 @@ public class PersonDAO {
 //                new Person(++PEOPLE_COUNT, "Igor"));
         people = new ArrayList<>();
 
-        people.add(new Person(++PEOPLE_COUNT, "Katia"));
-        people.add(new Person(++PEOPLE_COUNT, "Nikita"));
-        people.add(new Person(++PEOPLE_COUNT, "Bob"));
-        people.add(new Person(++PEOPLE_COUNT, "Igor"));
+        people.add(new Person(++PEOPLE_COUNT, "Katia", 20, "tom@mail.com"));
+        people.add(new Person(++PEOPLE_COUNT, "Nikita", 25, "Nikita25@hotmail.com"));
+        people.add(new Person(++PEOPLE_COUNT, "Bob", 18, "Bob@gmail.com"));
+        people.add(new Person(++PEOPLE_COUNT, "Igor", 60, "Igor@yandex.com"));
     }
 
     public List<Person> index() {
@@ -44,6 +44,9 @@ public class PersonDAO {
         Person personToBeUpdated = show(id);
 
         personToBeUpdated.setName(updatedPerson.getName());
+        personToBeUpdated.setAge(updatedPerson.getAge());
+        personToBeUpdated.setEmail(updatedPerson.getEmail());
+
     }
     //если такой id существует в листе(выдается true) происходит удаление элемента
     public void delete(int id) {

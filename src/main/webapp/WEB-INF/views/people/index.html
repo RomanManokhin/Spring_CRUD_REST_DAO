@@ -13,7 +13,7 @@
 <!--    указываем ссылку для перехода по пути /people/id(который мы получаем из нашей коллекции через геттер)-->
 <!--    при нажатии на ссылку мы переходим в show-->
     <a th:href="@{/people/{id}(id=${person.getId()})}"
-       th:text="${person.getName()}">user</a>
+       th:text="${person.getName() + ', ' + person.getAge()}">user</a>
 </div>
 <!--новая строка-->
 <br/>
