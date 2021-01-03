@@ -18,7 +18,7 @@ public class Person {
     @Min(value = 0, message = "Age should be greater then 0")
     private int age;
     @NotEmpty(message = "Email should not be empty")
-//    проверка на ввод email, внутри регулярное выражение которе делает проверка
+//    проверка на ввод email, внутри регулярное выражение которе делает проверка(валидация)
     @Email(message = "Email not correct")
     private String email;
 
